@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My Web</title>
+    <link rel="stylesheet" href="pfjs.js">
+    <link rel="stylesheet" href="pf.css">
+
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <button class="home-button">
+          <img class="home-icon" src="icons/zhongli1.png">
+          
+        </button>
+        <a id="home-anchor" href="#home-page">
+          <div class="home">My Web</div> 
+        </a>
+        
+      </div>
+
+      
+      <div class="right-section">
+        <button class="portfolio">
+          <a class="page-anchor" href="#portfolio-page">portfolio</a>
+          <div class="tooltip">My Portfolio</div>
+        </button>
+        <button class="resume">
+          <a class="page-anchor" href="#resume-page">Resume</a>
+          <div class="tooltip">My Resume</div>
+        </button>
+        <button class="form">
+          <a class="page-anchor" href="#form-page">Form</a>
+          <div class="tooltip">Fill a Form</div>
+        </button>
+        <button class="about">
+          <a class="page-anchor" href="#about-page">About</a>
+          <div class="tooltip">About Me</div>
+        </button>
+
+        
+      </div>
+    </header>
+
+    <main>
+      <div class="home-img-frame" id="home-page">
+        <img class="home-img" src="thumbnails/hq721.webp">
+      </div>
+      <div class="side-img">
+        <img class="side-img-one" src="thumbnails/hq722.webp">
+        <img class="side-img-one" src="thumbnails/hq722.webp">
+        <img class="side-img-one" src="thumbnails/hq722.webp">
+        <img class="side-img-one" src="thumbnails/hq722.webp">
+        <img class="side-img-one" src="thumbnails/hq722.webp">
+        <img class="side-img-one" src="thumbnails/hq722.webp">
+      </div>
+    </main>
+    <div class="portfolio-section" id="portfolio-page">
+      portfolio
+    </div>
+    <div class="resume-section" id="resume-page">
+      resume
+    </div>
+    <form class="form-section" id="form-page" method="post" 
+            name="ordForm" onsubmit = "return(validate());">
+      <div id="form-title">Form</div>
+      <div id="form-extra">
+        <div></div>
+        <div id="form-background">
+          <div id="about-you">
+            About You
+          </div>
+            Your Name*
+            <input type="text" class="form-input" id="nameChoice" name="nameChoice" placeholder="eg, John Doe">
+            Your Age*
+            <input type="number" class="form-input" id="ageChoice" name="ageChoice" placeholder="eg, 10,12,18,37,45,83,100">
+            Your Email*
+            <input type="email" class="form-input" id="emailChoice" name="emailChoice" placeholder="hello@johndoe.com">
+            Comment
+            <input type="text" class="form-input" id="commentChoice" name="commentChoice" placeholder="Comment">
+          <input type="submit" value="Submit">
+        </div>
+        <div></div>
+      </form>
+    
+      
+    </div>
+    <div class="about-section" id="about-page">
+      about
+    </div>
+  </body>
+</html>

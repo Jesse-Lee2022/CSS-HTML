@@ -1,0 +1,75 @@
+<!DOCTYPE html>  
+<html>  
+  <head>
+    <script>
+      /*
+          This function checks the Color field to make sure it is 3 characters in length
+          and it checks the Quantity to make sure it is numeric and from 1 to 12.
+      */
+
+      function validate() {
+            
+            if( document.ordForm.colorChoice.value.length != 3 ) {
+                alert( "Color should be 3 characters!" );
+                document.ordForm.colorChoice.focus() ;
+                return false;
+            }
+            if(isNaN(document.ordForm.qty.value) ||
+                (document.ordForm.qty.value < 1) ||
+                (document.ordForm.qty.value > 12)) {
+                alert( "Quantity must be number from 1 - 12!" );
+                document.ordForm.qty.focus() ;
+                return false;
+            }
+              
+            return( true );
+          }
+          
+          
+    </script>
+    <meta charset="utf-8">
+    <title>Task 5 - Form Validation</title>
+    <style></style>
+    <script type="text/javascript" src="validate.js"></script>
+  </head>     
+    <body>
+      <header>
+        <img src="../../Images/marketing.jpg">
+        <h1>        
+          Form Validation with HTML and JavaScript - Task 5<br>
+        </h1>
+      </header>
+      <p>
+        In this HTML form example we use built-in validation techniques that are included in HTML/HTML5.
+      </p>
+      <p>
+        A user would typically key in input values and click the submit button to validate.
+      </p>
+       
+      <div class="formarea">
+        <div class="formheader">
+          Task 5 - Sample Order Form with Built-in Validation
+        </div>
+        <p>
+          Order your free flower seedlings today! Just use the form below to enter
+          your color choice, number of seedlings, and an email address where we can
+          contact you when your order is ready.
+        </p>
+        <form action="indata.php" method="post" name="ordForm" 
+                  onsubmit = "return(validate());">
+          <label for="colorChoice">Color Choice (red - red, pur - purple, 
+                                          ora - orange):</label> 
+          <input style="width:20px;" type="text" id="colorChoice" name="colorChoice">          
+          <br><br>
+          <label for="qty">Quantity (1 - 12):  </label> 
+          <input style="width:20px;" type="text" id="qty" name="qty"><br>          
+          <hr><br>
+          <label for="emailAddr">Your eMail Address:</label> 
+          <input style="width:120px;" type="text" id="emailAddr" name="emailAddr">
+          <hr><br>
+          <input type="submit" value="Submit">
+        </form>       
+      </div>
+   </body>  
+
+</html>  

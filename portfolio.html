@@ -1,0 +1,45 @@
+<!DOCTYPE html><!--fdsfdsf-->
+<html>
+  <head>
+    <script>
+      function validate() {
+            
+            if( document.ordForm.nameChoice.value.length<1 ) {
+                alert( "Fill your name" );
+                document.ordForm.nameChoice.focus() ;
+                return false;
+            }
+            if(( document.ordForm.ageChoice.value < 1) ||
+                (document.ordForm.ageChoice.value > 150)) {
+                alert( "Quantity must be a number from 1 - 150!" );
+                document.ordForm.qty.focus() ;
+                return false;
+            }
+            console.log(document.getElementById("nameChoice").value)
+            return false;
+          }
+          
+    </script>
+  </head>
+  <body>
+    <form class="form-section" id="form-page" method="post" 
+    name="ordForm" onsubmit = "return(validate())">
+      <div id="form-title">Form</div>
+      <div id="form-extra">
+      <div id="form-background">
+        <div id="about-you">
+          About You
+        </div>
+          Your Name*
+          <input type="text" class="form-input" id="nameChoice" name="nameChoice" placeholder="eg, John Doe">
+          Your Age*
+          <input type="number" class="form-input" id="ageChoice" name="ageChoice" placeholder="eg, 10,12,18,37,45,83,100">
+          Your Email*
+          <input type="email" class="form-input" id="emailChoice" name="emailChoice" placeholder="hello@johndoe.com">
+          Comment
+          <input type="text" class="form-input" id="commentChoice" name="commentChoice" placeholder="Comment">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </body>
+</html>
