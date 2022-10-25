@@ -49,11 +49,13 @@ body{
   height: 300px;
   display: flex;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 50px;
   color: rgb(36, 138, 255);
   justify-content: space-between;
-  padding: 70px;
-  padding-top: 170px;
+  padding: 170px 70px 0 70px;
+}
+#front-page-break{
+  height: 70px;
 }
 .home {
   font-family: Roboto,Arial;
@@ -190,7 +192,7 @@ a{
   align-items: center;
   padding-bottom: 60px;
 }
-#portfolio-title{
+.title{
   font-size: 50px;
   margin: 10px;
   color: white;
@@ -202,7 +204,7 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
+  background-color: lightpink;
   height: 100px;
   color: white;
 }
@@ -212,24 +214,18 @@ a{
 .form-section{
   display: flex;
   flex-direction: column;
-  background-color: white;
   height: 450px;
   color: white;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding-top: 100px;
+  padding-bottom: 80px;
   
 }
 #about-you{
   font-size: 30px;
 }
-#form-title{
-  display: flex;
-  font-size: 50px;
-  justify-content: center;
-  align-items: center;
-  color: rgb(36, 138, 255);
-}
+
 #form-background{
   display: flex;
   flex-direction: column;
@@ -242,6 +238,9 @@ a{
   opacity: .6;
   transition: opacity .2s;
   margin: 5px;
+  border-radius: 8px;
+  margin-top: 50px;
+
 }
 #form-background:hover{
   opacity: 1;
@@ -250,6 +249,9 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+#about-you{
+  margin-bottom: 30px;
 }
 .form-input{
   height: 36px;
@@ -281,7 +283,40 @@ a{
   color: rgb(81, 81, 81);
 }
 .about-section{
-  background-color: lightcoral;
-  height: 800px;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(105, 104, 104);
+}
+#bio-div{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+#bio{
+  font-size: 30px;
+  width: 50%;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: azure;
+  
+}
+#bottom-break{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  margin-top: 40px;
+}
+#date{
+  height: 40px;
+  width: 100%;
+  text-align: center;
+}
+#me{
+  width: 30%;
+  object-fit: contain;
 }

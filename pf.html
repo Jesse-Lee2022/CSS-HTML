@@ -35,10 +35,11 @@
   <body>
     <header class="header">
       <div class="left-section">
-        <button class="home-button">
-          <img class="home-icon" src="pizza.png">
-          
-        </button>
+        <a class="page-anchor" href="#front-page">
+          <button class="home-button">
+            <img class="home-icon" src="pizza.png">
+          </button>          
+        </a>
         <a id="home-anchor" href="#front-page">
           <div class="home">My Web</div> 
         </a>
@@ -48,7 +49,7 @@
       
       <div class="right-section">
         <button class="portfolio">
-          <a class="page-anchor" href="#portfolio-page">portfolio</a>
+          <a class="page-anchor" href="#front-page-break">portfolio</a>
           <div class="tooltip">My Portfolio</div>
         </button>
         <button class="resume">
@@ -60,7 +61,7 @@
           <div class="tooltip">Fill a Form</div>
         </button>
         <button class="about">
-          <a class="page-anchor" href="#about-page">About</a>
+          <a class="page-anchor" href="#form-submit">About</a>
           <div class="tooltip">About Me</div>
         </button>
 
@@ -71,13 +72,13 @@
     <div id="front-page">
       <img src="profile-pic1.png">
       <div>
-        <p>Jesse Lee's</p>
+        <p>Jesse's</p>
         <p>Web Portfolio</p>
       </div>
-
     </div>
+    <div id="front-page-break"></div>
     <div class="portfolio-section" id="portfolio-page">
-      <div id="portfolio-title">Portfolio</div>
+      <div class="title">Portfolio</div>
       <div class="side-img">
         <a href="https://py3.codeskulptor.org/#user307_jcZjhhx4sc_3.py">
           <img class="side-img-one" src="parametric-tan.png">
@@ -102,7 +103,7 @@
 
     <form class="form-section" id="form-page" method="post" 
     name="ordForm" onsubmit = "return(validate())">
-      <div id="form-title">Form</div>
+      <div class="title">Form</div>
       <div id="form-background">
         <div id="about-you">
           About You
@@ -121,7 +122,20 @@
 
  
     <div class="about-section" id="about-page">
-      about
+      <p class="title">About Me</p>
+      <div id="bio-div">
+        <img id="me" src="profile-pic1.png">
+        <p id="bio">
+          Hi, I'm Jesse. I'm a grade 12 student currently enrolled in the Computer Programming Co-op,
+          learning skills in Python, Javascript, HTML, and CSS. I find programming to be 
+          a very complex and broad field, which is one of the main reasons I have a passion
+          for it. Learning, doing interesting things, and challenging myself are what I 
+          find the most joy in life and what I would like pursue to the best of my abilities.
+        </p>
+      </div>
+
+      <div id="bottom-break"></div>
+      <p id="date">2022</p>
     </div>
 
 
