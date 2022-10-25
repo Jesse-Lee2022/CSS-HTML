@@ -11,6 +11,11 @@ function validate() {
         document.ordForm.qty.focus() ;
         return false;
     }
-    return True;
-  }
-  
+    if (( document.ordForm.emailChoice.value.length < 4) ||
+        (document.ordForm.emailChoice.value.indexOf("@"))>
+        (document.ordForm.emailChoice.value.indexOf("."))){
+          alert( "The email filled is not real" );
+          document.ordForm.qty.focus() ;                  
+        }
+    alert("Thank You")
+    }

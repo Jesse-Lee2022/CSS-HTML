@@ -15,7 +15,12 @@
                 document.ordForm.qty.focus() ;
                 return false;
             }
-            console.log(document.getElementById("nameChoice").value)
+            if (( document.ordForm.emailChoice.value.length < 4) ||
+                (document.ordForm.emailChoice.value.indexOf("@"))>
+                (document.ordForm.emailChoice.value.indexOf("."))){
+                  alert( "The email filled is not real" );
+                  document.ordForm.qty.focus() ;                  
+                }
             return false;
           }
           

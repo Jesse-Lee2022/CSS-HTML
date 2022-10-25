@@ -3,19 +3,43 @@
 
   <head>
     <title>My Web</title>
-    <link rel="stylesheet" href="pfjs.js">
+    <script>
+      function validate() {
+            
+            if( document.ordForm.nameChoice.value.length<1 ) {
+                alert( "Fill your name" );
+                document.ordForm.nameChoice.focus() ;
+                return false;
+            }
+            if(( document.ordForm.ageChoice.value < 1) ||
+                (document.ordForm.ageChoice.value > 150)) {
+                alert( "Quantity must be a number from 1 - 150!" );
+                document.ordForm.qty.focus() ;
+                return false;
+            }
+            if (( document.ordForm.emailChoice.value.length < 4) ||
+                (document.ordForm.emailChoice.value.indexOf("@"))>
+                (document.ordForm.emailChoice.value.indexOf("."))){
+                  alert( "The email filled is not real" );
+                  document.ordForm.qty.focus() ;                  
+                }
+            alert("Thank You")
+            }
+    </script>
     <link rel="stylesheet" href="pf.css">
-
-
+    <link rel="faviconIcon" href="favicon (1).ico" type="image/x-icon">
+    <link rel="shortcut" href="favicon (1).ico" type="image/x-icon">
+    <meta name="viewport" content="width-device-width, initial-scale-1, shrink-to-fit-no">
+    <meta name="robots" content="noIndex, nofollow">
   </head>
   <body>
     <header class="header">
       <div class="left-section">
         <button class="home-button">
-          <img class="home-icon" src="icons/zhongli1.png">
+          <img class="home-icon" src="pizza.png">
           
         </button>
-        <a id="home-anchor" href="#home-page">
+        <a id="home-anchor" href="#front-page">
           <div class="home">My Web</div> 
         </a>
         
@@ -28,11 +52,11 @@
           <div class="tooltip">My Portfolio</div>
         </button>
         <button class="resume">
-          <a class="page-anchor" href="#resume-page">Resume</a>
+          <a class="page-anchor" href="#line-2-side">Resume</a>
           <div class="tooltip">My Resume</div>
         </button>
         <button class="form">
-          <a class="page-anchor" href="#form-page">Form</a>
+          <a class="page-anchor" href="#resume-page">Form</a>
           <div class="tooltip">Fill a Form</div>
         </button>
         <button class="about">
@@ -44,51 +68,62 @@
       </div>
     </header>
 
-    <main>
-      <div class="home-img-frame" id="home-page">
-        <img class="home-img" src="thumbnails/hq721.webp">
+    <div id="front-page">
+      <img src="profile-pic1.png">
+      <div>
+        <p>Jesse Lee's</p>
+        <p>Web Portfolio</p>
       </div>
-      <div class="side-img">
-        <img class="side-img-one" src="thumbnails/hq722.webp">
-        <img class="side-img-one" src="thumbnails/hq722.webp">
-        <img class="side-img-one" src="thumbnails/hq722.webp">
-        <img class="side-img-one" src="thumbnails/hq722.webp">
-        <img class="side-img-one" src="thumbnails/hq722.webp">
-        <img class="side-img-one" src="thumbnails/hq722.webp">
-      </div>
-    </main>
+
+    </div>
     <div class="portfolio-section" id="portfolio-page">
-      portfolio
+      <div id="portfolio-title">Portfolio</div>
+      <div class="side-img">
+        <a href="https://py3.codeskulptor.org/#user307_jcZjhhx4sc_3.py">
+          <img class="side-img-one" src="parametric-tan.png">
+        </a>
+        <a href="https://py3.codeskulptor.org/#user307_R6zcZFn4RY_5.py">
+          <img class="side-img-one" src="Screenshot 2022-10-24 175945.png">
+        </a>
+        <img class="side-img-one" src="placeholder.png">
+        <img id="line-2-side" class="side-img-one" src="placeholder.png">
+        <img class="side-img-one" src="placeholder.png">
+        <img class="side-img-one" src="placeholder.png">
+      </div>
     </div>
+
+
     <div class="resume-section" id="resume-page">
-      resume
+      <a class="anchors" href="https://docs.google.com/document/d/1v46tD0OUJdTFxEI6Qx_WvPHPUiwvM7QALkTp-52Tjwg/edit?usp=sharing">Resume</a>
+      <div class="link-break">||</div>
+      <a class="anchors" href="https://github.com/Jesse-Lee2022/CSS-HTML">Github</a>
     </div>
+
+
     <form class="form-section" id="form-page" method="post" 
-            name="ordForm" onsubmit = "return(validate());">
+    name="ordForm" onsubmit = "return(validate())">
       <div id="form-title">Form</div>
-      <div id="form-extra">
-        <div></div>
-        <div id="form-background">
-          <div id="about-you">
-            About You
-          </div>
-            Your Name*
-            <input type="text" class="form-input" id="nameChoice" name="nameChoice" placeholder="eg, John Doe">
-            Your Age*
-            <input type="number" class="form-input" id="ageChoice" name="ageChoice" placeholder="eg, 10,12,18,37,45,83,100">
-            Your Email*
-            <input type="email" class="form-input" id="emailChoice" name="emailChoice" placeholder="hello@johndoe.com">
-            Comment
-            <input type="text" class="form-input" id="commentChoice" name="commentChoice" placeholder="Comment">
-          <input type="submit" value="Submit">
+      <div id="form-background">
+        <div id="about-you">
+          About You
         </div>
-        <div></div>
-      </form>
-    
-      
-    </div>
+          Your Name*
+          <input type="text" class="form-input" id="nameChoice" name="nameChoice" placeholder="eg, John Doe">
+          Your Age*
+          <input type="number" class="form-input" id="ageChoice" name="ageChoice" placeholder="eg, 10,12,18,37,45,83,100">
+          Your Email*
+          <input type="email" class="form-input" id="emailChoice" name="emailChoice" placeholder="hello@johndoe.com">
+          Comment
+          <input type="text" class="form-input" id="commentChoice" name="commentChoice" placeholder="Comment">
+        <input id="form-submit" type="submit" value="Submit">
+      </div> 
+    </form>
+
+ 
     <div class="about-section" id="about-page">
       about
     </div>
+
+
   </body>
 </html>
